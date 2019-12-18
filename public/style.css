@@ -1,0 +1,97 @@
+
+.mainbody
+  {
+  background-color: #FFFFFF;
+  margin-left: 4%;
+  margin-right: 4%;
+  }
+
+  .body_referrals{
+    background-color: #FFFFFF;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+
+.h3one
+  {
+  color: #FF9800;
+  font-size: 22px;
+  border: solid white;
+  height: 15%;
+  width: 100%;
+  }
+#container
+  {
+  height: 100vh;
+  width: 100%;
+  padding-top: 5vh;
+  background-color:#82b891;
+  }
+
+#courses
+   {
+  border-top: solid gold;
+  width: 100%;
+   }
+#addcourses
+  {
+  border-top:solid gold;
+  border-radius: 20px;
+  height: 40%;
+  }
+#deletecourses
+  {
+    border-top:solid gold;
+    border-radius: 20px;
+      height: 40%;
+  }
+  #editcourses
+  {
+  border-top:solid gold;
+      border-radius: 20px;
+        height: 40%;
+  }
+
+#container_refs
+{
+  height: 100vh;
+  width: 100%;
+  background-color:#82b891;
+}
+#container_ourstory
+{
+  height: 100vh;
+  width: 100%;
+  background-color:#82b891;
+}
+
+#selections{
+border: solid gold;
+border-radius: 10px;
+height: 80vh;
+margin-left: 5%;
+margin-right: 5%;
+
+}
+#show_referal_tables_here{
+  border: solid gold;
+  border-radius: 10px;
+  height: 80vh;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.loginhere{
+
+}
+#textarea_section{
+  border: solid gold;
+  border-radius: 10px;
+  height: 70vh;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+th,td{
+margin-right: 30%;
+
+
+}

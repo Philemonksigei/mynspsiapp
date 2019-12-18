@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>www.afixus-systems.co.ke</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+ </head>
+ <body class="mainbody" onload="show_defaults_welcomepage()">
+          <div id="container">
+               <p style="font-size: 150%; color:#fff;">NSPSI College Main Dashboard</p>
+                      <div id="courses">
+                              <div class="top_options" style="margin-left:2.7%;">
+                                <button type="button" name="button" style=" width:16%; height:30%;" onclick="show_course_list()">Course List</button>
+                                <button type="button" name="button" style=" width:16%; height:30%;"onclick="show_addcourse()">Add Course</button>
+                                <button type="button" name="button" style=" width:16%; height:30%;" onclick="show_edit_course()">Edit Course</button>
+                                <button type="button" name="button" style=" width:16%; height:30%;"onclick="show_delete_course()">Delete Course</button>
+                                <button type="button" name="button" style=" width:16%; height:30%;" onclick="managerefs()">Manage Referrals</button>
+                                <button type="button" name="button" style=" width:16%; height:30%;" onclick="aboutnspsicole()">Ou Story</button>
+                              </div>
+
+                              <div id="addcourses">
+                                        <p style="margin-left:5%;">Add courses here. <br> Please use at most fiftheen characters ONLY as couse name.</p>
+                                        <input id="courseadd"type="number" name="course" placeholder="Course ID" style="width:30%;margin-left:5%;"required>
+                                            <select id="select_course" class="course_type" name="Course Types">
+                                              <option >--SELECT COURSE TYPE--</option>
+                                              <option >Short Course</option>
+                                              <option >KNEC Examined Course</option>
+                                              <option >KASNEB Examined Course</option>
+                                            </select> <br><br>
+                                        <input  id="new_course"type="text" name="course" placeholder="New Course" style="width:70%;margin-left:5%;"required> <br><br>
+                                        <button class="btn btn-success"type="button" name="button" style="margin-left:5%; width:15%; font:50%;" onclick="addcoursehere()">ADD</button>
+                              </div>
+                            <br>
+                               <div id="deletecourses">
+                                 <p style="margin-left:5%;">You  can delete obsolete courses here.<br> Search by course ID</p>
+                                 <hr>
+                          <div class="row">
+                            <div class="col-sm-4" style="border-right:solid yellow;">
+                              <input type="number" name="course" placeholder="Search Course ID" style="width:70%;margin-left:5%; font-size:70%;"required> <br> <br>
+                              <button type="button" name="button"style="margin-left:5%;width:75%;font-size:70%">Search</button>
+                            </div>
+                            <div class="col-sm-6">
+                              <input type="rext" name="course" placeholder="Course type appears here!" style="width:70%;margin-left:5%;font-size:100%;" readonly required><br> <br>
+                              <input type="text" name="course" placeholder="Course name appears here!" style="width:70%;margin-left:5%;font-size:100%;"readonly  required> <br><br>
+                                <button type="button" name="button"style="margin-left:5%;width:15%;" class="btn btn-danger">Delete</button> <br>
+                            </div>
+
+                          </div>
+
+
+                               </div>
+                           <br>
+                               <div id="editcourses">
+                                   <p style="margin-left:5%;">Edit the NAMES and CODES of courses here courses here. <br>Search  by course ID</p>
+                                   <input type="number" name="course" placeholder="Course ID" style="width:30%;margin-left:5%;"required>
+                                   <input type="text" name="course" placeholder="Course type appears here" style="width:30%;margin-left:5%;" required><br> <br>
+                                   <input type="text" name="course" placeholder="Course name appears here!" style="width:70%;margin-left:5%;" required> <br><br>
+                                   <button type="button" name="button"style="margin-left:5%;width:15%;"class="btn btn-info">Update</button> <br> <br>
+                               </div>
+                               <div id="course_list" style="width:30%;margin-left:5%;">
+                                       <p>List of Our Current Courses</p>
+                                       <table>
+                                         <tr>
+                                          <th>Course ID</th> <th>Course Name</th><th>Course Type</th>
+                                        </tr>
+                                      </table>
+                                      <!--generate the course list here-->
+                              </div>
+                     </div>
+        </div>
+<!-- referals dashboard-->
+        <div id="container_refs">
+            <p style="font-size:150%; margin-left:5%; color:#fff;">Manage Referals here</p>
+              <div class="row">
+                        <div class="col-sm-6">
+                                <div id="selections">
+                                     <p>
+                                           <b> USER ID refers to:<br> <u>Adm NO</u> for Students, <u>StaffNO </u>for Staff Members and
+                                           <u>National ID</u> for Guest Users of the Outreach Android App</b> <br><br>
+                                           <label for="refID"  style="margin-left:5%;">User ID</label>   <input id="refID"type="text" placeholder="User ID"required  style="width:25%;margin-left:3%"> <br>
+                                      </p>
+                                        <script>
+                                          date = new Date();
+                                          //alert(date);
+                                        </script>
+                                                <br>
+                                                    <label for="year_select" style="margin-left:7%">Year</label>
+                                                                  <select id="referral_year" name="year_select"style="margin-left:5%;width:25%;">
+                                                                         <option>--select year--</option>
+                                                                         <option>2019</option>
+                                                                         <option>2020</option>
+                                                                         <option>2021</option>
+                                                                         <option>2022</option>
+                                                                         <option>2023</option>
+                                                                         <option>2024</option>
+                                                                         <option>2025</option>
+                                                                         <option>2026</option>
+                                                                  </select>
+                                                      <label for="term_select" style = "margin-left:5%">Term</label>
+                                                                   <select id="referral_classification"name="term_select"style="margin-left:5%;width:25%;">
+                                                                      <option>--Term--</option>
+                                                                      <option>1</option>
+                                                                      <option>2</option>
+                                                                      <option>3</option>
+                                                                  </select>
+
+                                                                  <a href="aboutnspsi.html">Our Story</a>
+                                              <br> <br> <br> <br>
+                                                <button class="btn btn-success" type="button" name="button"style="margin-left:20%;width:55%; align:center;" onclick="referalsec()">Submit</button>
+                              </div>
+                            </div>
+                             <div class="col-sm-6">
+                                 <div id="show_referal_tables_here" >
+                                   <!-- replace the div below with the current user as picked from the database -->
+                                   <p> List of refered students refered by:</p>
+                                     <input style="width:40%;background-color:gold; margin-left: 5%;"type="text" placeholder="Referee's Name appears here!"readonly>
+                                     <input style="width:25%;background-color:gold;"type="text" placeholder="Usertype"readonly>
+                                   <p id="change_area"></p>
+                                </div>
+                            </div>
+              </div>
+          </div>
+<!-- //our story-->
+          <div id="container_ourstory">
+                  <button type="button" name="button" onclick="show_defaults_welcomepage()" style="float:right; margin-top:2%;">Main Dashboard</button>
+                  <p style="margin-left:5%; padding-top: 1vh;font-size: 140%; color:white;">Submit a short story about your College. <br>It will always be shown on the Outreach App</p>
+
+                  <div id="textarea_section" >
+                        <div class="row">
+                                 <div  class="col-sm-6">
+                                         <form id="messageForm" method="post"  style="margin-left:5%;">
+                                             <p>The short story you are giving here will always be shown on the <b>Outreach App </b> please be brief. <br> Please keep it brief! </p>
+                                             <textarea id="messageBody"name="abt_txtarea" rows="8" cols="80" style="background-color:khaki; width:100%;max-height:49vh;"></textarea> <br>
+                                             <button type="submit" >Submit</button>
+                                        </form>
+                                 </div>
+                                 <div  class="col-sm-6" style="border-left: solid gold;">
+                                         <p style="font-size:120%; color:#ffffff">Here is the preview of your story!</p>
+                                         <textarea id="myaboutnspsi"name="abt_txtarea" rows="8" cols="80" style="background-color:#82b891; width:100%; margin-top: 10%; max-height:49vh;" readonly></textarea> <br>
+                                </div>
+                        </div>
+                 </div>
+
+          </div>
+          <!-- The core Firebase JS SDK is always required and must be listed first -->
+          <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-database.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-storage.js"></script>
+          <script src="index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+button{
+padding: 4px;
+background-color: #058063;
+color:#fff;
+border-radius:10px;
+width:100%;
+}
+#container_login
+{
+background-image:url(images/bg2_main.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+height:96vh;
+}
+.body_login
+{
+
+}
+.mainbody
+  {
+  background-color: #FFFFFF;
+  }
+#container
+  {
+  height: 94vh;
+  background-color:#82b891;
+  }
+#courses
+   {
+  border-top: solid gold;
+  width: 100%;
+   }
+#addcourses
+  {
+  border-top:solid gold;
+  border-radius: 20px;
+  height: 40%;
+  }
+#deletecourses
+  {
+    border-top:solid gold;
+    border-radius: 20px;
+      height: 40%;
+  }
+  #editcourses
+  {
+  border-top:solid gold;
+      border-radius: 20px;
+        height: 40%;
+  }
+#course_list
+{
+border-top:solid gold;
+border-radius: 20px;
+height: 40%;
+}
+#myrefs
+{
+  border-top:solid gold;
+      border-radius: 20px;
+        height: 40%;
+}
+#container_ourstory
+{
+  border-top:solid gold;
+      border-radius: 20px;
+        height: 40%;
+}
+
+#textarea_section{
+  border: solid gold;
+  border-radius: 10px;
+  height: 70vh;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+th,td{
+margin-right: 30%;
+
+
+}

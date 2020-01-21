@@ -1,37 +1,30 @@
-
-.container_login
+button{
+padding: 4px;
+background-color: #058063;
+color:#fff;
+border-radius:10px;
+width:100%;
+}
+#container_login
 {
 background-image:url(images/bg2_main.jpg);
 background-repeat: no-repeat;
 background-size: cover;
-height: 100%;
-padding: 10%;
-
-
+height:96vh;
 }
 .body_login
 {
-  height: 94vh;
+
 }
 .mainbody
   {
   background-color: #FFFFFF;
   }
-.h3one
-  {
-  color: #FF9800;
-  font-size: 22px;
-  border: solid white;
-  height: 15%;
-  width: 100%;
-  }
 #container
   {
   height: 94vh;
-  padding-top: 5vh;
   background-color:#82b891;
   }
-
 #courses
    {
   border-top: solid gold;
@@ -57,12 +50,9 @@ padding: 10%;
   }
 #course_list
 {
-  border-top:solid gold;
-      border-radius: 20px;
-        height: 40%;
-
-
-
+border-top:solid gold;
+border-radius: 20px;
+height: 40%;
 }
 #myrefs
 {

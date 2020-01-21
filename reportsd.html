@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>referees</title>
+    <link rel="stylesheet" href="styled.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  </head>
+      <body class="mainbody" style="max-height: 90vh;" >
+            <div id="container">
+                <hr >
+              <label for="report_Type" style="weight:bold;">Choose Report:</label>
+              <select id="select_report" class="exam_type" name="report_Type" >
+                  <option >--REPORT--</option>
+                  <option >All Referees</option>
+                  <option >All Referrals</option>
+                  <option >Staff Referees</option>
+                  <option >Student Referees</option>
+                  <option >Guest Referees</option>
+                </select>
+                <button type="button" name="button" style=" width:13.5%; padding-right: 3px;" onclick="showReprts()">Generate</button>
+
+                <div class="search_area" style="float:right;">
+                  <label for="search_id">Search by USER ID</label>
+                  <input type="text" "search_id" placeholder="User ID" id="searchID"style="text-align:center; color:red;">
+                  <button type="button" name="button" onclick="IndivUsersRefs()">Show</button>
+                </div>
+
+                        <div id="Allreferees_table">
+                          <p>They are catgorised into this groups namely <b>Students</b>, <b>Staff</b> and <b>Guest</b> users</p>
+                          <h3> <u>All the Registered Referees are as below:</u></h3>
+                                <div id="userListTable">
+                                        <table id="users_table" border="solid black" cellpadding="3" style="width:100%; background-color:#fff;"  >
+                                                  <thead id="theader_users">
+                                                  <tr style="weight:bold;"><th>#</th> <th>Referee ID</th> <th>Name</th><th>Type </th><th>Phone No</th> <th style="color:blue;">Email Address</th></tr>
+                                                  </thead>
+                                                  <tbody id="users_table_body">
+                                                  </tbody>
+                                       </table>
+                                </div>
+                        </div>
+                        <div id="Studentreferees_table">
+                          <p>They are catgorised into this groups namely <b>Students</b>, <b>Staff</b> and <b>Guest</b> users</p>
+                          <h3> <u>Student Referees</u></h3>
+                          <div id="userListTable">
+                                  <table id="users_table" border="solid black" cellpadding="3" style="width:100%; background-color:#fff;"  >
+                                             <thead id="theader_users">
+
+                                                <tr style="weight:bold;"><th>#</th> <th>Referee ID</th> <th>Name</th><th>Email Address</th><th>Phone No</th></tr>
+                                            </thead>
+                                            <tbody id="Student_users_table">
+
+
+                                            </tbody>
+                                  </table>
+                          </div>
+                        </div>
+
+                        <div id="Staffreferees_table">
+                          <p>They are catgorised into this groups namely <b>Students</b>, <b>Staff</b> and <b>Guest</b> users</p>
+                          <h3> <u>NSPSI Staff Referees</u></h3>
+                          <div id="userListTable">
+                                  <table id="users_table" border="solid black" cellpadding="3" style="width:100%; background-color:#fff;"  >
+                                             <thead id="theader_users">
+
+                                                <tr style="weight:bold;"><th>#</th> <th>Referee ID</th> <th>Name</th><th>Email Address</th><th>Phone No</th></tr>
+                                            </thead>
+                                            <tbody id="staff_table_body">
+
+
+                                            </tbody>
+                                  </table>
+                          </div>
+                        </div>
+
+                        <div id="Guestreferees_table">
+                          <p>They are catgorised into this groups namely <b>Students</b>, <b>Staff</b> and <b>Guest</b> users</p>
+                          <h3> <u>Guest Referees(None-staff and None-Student):</u></h3>
+                          <div id="userListTable">
+                                  <table id="users_table" border="solid black" cellpadding="3" style="width:100%; background-color:#fff;"  >
+                                             <thead id="theader_users">
+
+                                                <tr style="weight:bold;"><th>#</th> <th>Referee ID</th> <th>Name</th><th>Email Address</th><th>Phone No</th></tr>
+                                            </thead>
+                                            <tbody id="Guest_table_body">
+
+                                            </tbody>
+                                  </table>
+                          </div>
+                        </div>
+                        <div id="All_referals_table">
+                              <h5> <u>All Referrals made by all Referees(<b>Students</b>, <b>Staff</b> and <b>Guest</b>):</u></h5>
+                             <script> </script>
+                              <div id="allReferrals_ListTable">
+                                      <table id="allrefs_table" border="solid black" cellpadding="3" style="width:100%; background-color:#fff;max-height: 400px;"  >
+                                                 <thead id="theader_users">
+
+                                                    <tr style="weight:bold;"><th>#</th> <th>Student Name</th> <th>Phone NO</th><th>Email </th><th>Gender</th>
+                                                       <th>Target Course</th><th>Course Level</th><th>KCPE/SE Grade</th><th>Projected Intake</th><th>Refered by:</th><th>Referee ID</th>
+                                                       <th>Referal Date</th></tr>
+                                                </thead>
+                                                <tbody id="allrefs_table_body">
+
+                                                </tbody>
+                                      </table>
+                              </div>
+                        </div>
+                        <div id="Indiv_referals_table">
+                            <p>They are catgorised into this groups namely <b>Students</b>, <b>Staff</b> and <b>Guest</b> users</p>
+                            <h3>Referrals made by:</h3>
+                            <div id="userListTable">
+                                    <table id="users_table" border="solid black" cellpadding="3" style="width:100%; background-color:#fff;"  >
+                                               <thead id="theader_users">
+                                                 <div id="currentUsertt"></div>
+
+                                                 <tr style="weight:bold;"><th>#</th> <th>Student Name</th> <th>Phone NO</th><th>Email </th><th>Gender</th>
+                                                    <th>Target Course</th><th>Course Level</th><th>KCPE/SE Grade</th><th>Projected Intake</th><th>Refered by:</th>
+                                                    <th>Referal Date</th></tr>
+                                                  </thead>
+                                              <tbody id="IndivUsers_table_body">
+
+
+                                              </tbody>
+                                    </table>
+                            </div>
+                        </div>
+          </div>
+          <script src="index.js?yy"></script>
+      </body>
+</html>

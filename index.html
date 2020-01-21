@@ -3,15 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>welcome</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styled.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
   </head>
   <body id="body_login">
   <div id="container_login" >
-      <div class="row" id="login_row">
-            <div class="col-sm-6">
-                 <div id="login_area_id" style="padding:2%;">
+                 <div id="login_area_id" style="padding:2%; padding-left:35%;padding-top:15%;">
                     <p> <b>Please Login here</b></p>
                     <input type="email" name="useremail" placeholder="hello@email.com"style="width:30%; text-align:center;" id="email_field"> <br> <br>
                     <input type="password" name="password" placeholder="********"style="width:30%;text-align:center;" id="password_field"> <br> <br>
@@ -19,22 +17,14 @@
                     <button type="button" name="button" style="width:30%;" onclick="logoutx()">Login</button> <br> <br>
                     <p> <b><a href="#">Forgot Password</a></b> </p>
                 </div>
-            </div>
-            <div class="col-sm-6">
-                <div id="creat_user_id">
-                    <p> <b>Create Account here</b></p>
-                    <input type="email" name="useremail" placeholder="hello@email.com"style="width:30%; text-align:center;" id="email_field_new"> <br> <br>
-                    <input type="password" name="password" placeholder="********"style="width:30%;text-align:center;" id="password_field_new"> <br> <br>
-                    <button type="button" name="button" style="width:30%;" onclick="create_user()">Create User</button> <br> <br>
-                </div>
-            </div>
-      </div>
+
 </div>
+<footer>Powered by Afixus Solutions Kenya</footer>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-database.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-storage.js"></script>
-<script src="index.js?uu"></script>
+<script src="index.js?"></script>
   </body>
 </html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+          <meta charset="utf-8">
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>www.afixus-systems.co.ke</title>
+          <link rel="stylesheet" href="css/bootstrap.min.css">
+          <link rel="stylesheet" href="styled.css">
+  </head>
+
+
+  <body>
+    <header style="background-color:#050780;color:white; padding:3px;">
+      <p style="margin-left:3%;">NSPSI Main Dashboard</p>
+
+    </header>
+    <div class="row" style="font-size:80%; height:92vh; width:98%; align:center; margin-left:1%;margin-right:1%;">
+                <div class="col-sm-2" style="background-color:#057680;">
+                      <div class="options_menu" style="padding:4px;">
+                        <button type="button" name="button"  onclick="show_course_list()" id="btn_list">Courses </button> <br> <br>
+                        <button type="button" name="button" onclick="show_addcourse()" id="btn_addCourse">Add Course</button> <br><br>
+                        <button type="button" name="button" onclick="show_edit_course()" id="btn_EditCourse">Edit Course</button> <br><br>
+                        <button type="button" name="button"  onclick="show_delete_course()" id="btn_DeleteCourse">Delete Course</button> <br><br>
+                        <button type="button" name="button" onclick="aboutnspsicole()" id="btn_OurStory">Our Story</button> <br><br>
+                        <button type="button" name="button" onclick="loadrefereespage()" id="btn_Reports">Reports</button> <br> <br> <br>
+                        <button type="button" name="button" onclick="supportPage() id="btn_list"">User Support</button>
+                      </div>
+                </div>
+    <div class="col-sm-10" style="background-color:#800522;">
+      <p id="main_content"></p>
+                <div id="addcourses">
+                          <p style="margin-left:5%; color:#fff;"> <b>Add courses here. <br> Please use at most fiftheen characters ONLY as couse name.</p></b>
+                          <input id="course_id"type="number" name="course" placeholder="Course ID" style="width:30%;margin-left:5%;"required> <br> <br>
+                              <select id="select_examtype" class="exam_type" name="Course Types"style="width:30%;margin-left:5%;">
+                                <option >--SELECT COURSE TYPE--</option>
+                                <option >Short Course</option>
+                                <option >KNEC Examined Course</option>
+                                <option >KASNEB Examined Course</option>
+                              </select> <br><br>
+                          <input  id="course_name_id"type="text" name="course" placeholder="New Course" style="width:30%;margin-left:5%;"required> <br><br>
+                          <button class="btn btn-success"type="button" name="button" style="margin-left:5%; width:30%; font:50%;" onclick="addNewCourses()">ADD</button>
+                </div>
+
+                <div id="container_ourstory">
+                    <p style="margin-left:5%;"> <b>Please Write a short Story <br> Please use at most fiftheen characters ONLY as couse name.</p></b>
+                    <hr>
+                    <div class="row"style="width:80%;margin-left:3%;">
+                          <div class="col-sm-6"style="border-right:solid yellow;">
+                            <textarea name="name" rows="8" cols="50"></textarea> <br>
+                            <button class="btn btn-success"type="button" name="button" style="margin-left:5%; width:30%; font:50%;" onclick="addNewCourses()">ADD</button> <br>
+                          </div>
+                          <div class="col-sm-6">
+                       <textarea name="news1" rows="2" cols="80" style="height:15%;resize: none;"></textarea><br>
+                          <button type="button" name="news1btn" style="width:30%;margin-left:60%;">Submit</button> <br>
+                          <hr>
+                       <textarea name="news2" rows="2" cols="80"style="height:15%;resize: none;"></textarea> <br>
+                          <button type="button" name="news2btn"style="width:30%;margin-left:60%;">Submit</button> <br>
+                          <hr>
+                       <textarea name="news3" rows="2" cols="80"style="height:15%;resize: none;"></textarea> <br>
+                          <button type="button" name="news3btn"style="width:30%;margin-left:60%;">Submit</button> <br>
+                          </div>
+                    </div>
+                 </div>
+
+                 <div id="deletecourses">
+                     <p style="margin-left:5%;"> <b>You  can delete obsolete courses here.<br> Search by course ID</p></b>
+                       <hr>
+                     <div class="row"style="width:100%;">
+                      <!-- col1-->
+                          <div class="col-sm-4" style="border-right:solid yellow;">
+                            <input type="number" name="course" placeholder="Search Course ID" style="width:70%;margin-left:5%; "required> <br> <br>
+                            <button type="button" name="button"style="margin-left:5%;width:70%;">Search</button>
+                          </div>
+                            <!-- col2-->
+                          <div class="col-sm-6">
+                            <input type="rext" name="course" placeholder="Course type appears here!" style="width:70%;margin-left:5%;font-size:100%;" readonly required><br> <br>
+                            <input type="text" name="course" placeholder="Course name appears here!" style="width:70%;margin-left:5%;font-size:100%;"readonly  required> <br><br>
+                            <button type="button" name="button"style="margin-left:5%;width:15%;" class="btn btn-danger">Delete</button> <br>
+                          </div>
+                     </div>
+                 </div>
+
+                 <div id="editcourses">
+                     <p style="margin-left:3%;"> <b>Edit the NAMES and CODES of courses here. <br>Search  by course ID </b></p>
+                     <hr>
+                         <div class="row" style="width:100%;">
+                             <div class="col-sm-4" style="border-right:solid yellow;">
+                                   <input type="number" name="course" placeholder="Course ID" style="width:70%;margin-left:5%;"required> <br> <br>
+                                   <button type="button" name="button"style="margin-left:5%;width:70%;">Search</button>
+                             </div>
+                               <div class="col-sm-6">
+                                 <input type="text" name="course" placeholder="Course type appears here" style="width:70%;margin-left:5%;" required ><br> <br>
+                                 <input type="text" name="course" placeholder="Course name appears here!" style="width:70%;margin-left:5%;" required > <br><br>
+                                 <button type="button" name="button"style="margin-left:5%;width:15%;align:center;"class="btn btn-info">Update</button> <br> <br>
+                               </div>
+                         </div>
+                 </div>
+
+                 <div id="course_list"style="width:96%; margin-left:2%;" >
+                               <p style="color:#FFF; margin-left: 5%;" > <b>List of Our Current Courses</b></p>
+                               <!--generate the course list here-->
+                               <table id="table_courses" border=" 1px solid black"style="background-color:#fff;width:100%;">
+                              <thead>
+                                    <tr>
+                                     <th>#</th><th>Course ID</th> <th>Course Name</th><th>Course Type</th>
+                                   </tr>
+                              </thead>
+                              <tbody id="table_courselist">
+                              </tbody>
+
+                              </table>
+                 </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-storage.js"></script>
+    <script src="index.js?dffdk"></script>
+  </body>
+</html>
